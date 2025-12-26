@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="flowers.png" type="image/x-icon" />
+  <title>Photos</title>
+</head>
+<body>
+  <div class="night"></div>
+
+  <div class="photos-toolbar">
+    <a class="photos-back" href="index.html" aria-label="Back to Home">← Back</a>
+    <div class="photos-title">Memories</div>
+  </div>
+
+  <div class="photos-slider" role="region" aria-label="Sliding photos">
+    <div class="slides">
+      <!-- 12 vertical photos; update filenames to match your gallery -->
+      <img src="gallery/photo1.jpg" alt="Photo 1" loading="lazy" decoding="async" data-caption="Photo 1" />
+      <img src="gallery/photo2.jpg" alt="Photo 2" loading="lazy" decoding="async" data-caption="Photo 2" />
+      <img src="gallery/photo3.jpg" alt="Photo 3" loading="lazy" decoding="async" data-caption="Photo 3" />
+      <img src="gallery/photo4.jpg" alt="Photo 4" loading="lazy" decoding="async" data-caption="Photo 4" />
+      <img src="gallery/photo5.jpg" alt="Photo 5" loading="lazy" decoding="async" data-caption="Photo 5" />
+      <img src="gallery/photo6.jpg" alt="Photo 6" loading="lazy" decoding="async" data-caption="Photo 6" />
+      <img src="gallery/photo7.jpg" alt="Photo 7" loading="lazy" decoding="async" data-caption="Photo 7" />
+      <img src="gallery/photo8.jpg" alt="Photo 8" loading="lazy" decoding="async" data-caption="Photo 8" />
+      <img src="gallery/photo9.jpg" alt="Photo 9" loading="lazy" decoding="async" data-caption="Photo 9" />
+      <img src="gallery/photo10.jpg" alt="Photo 10" loading="lazy" decoding="async" data-caption="Photo 10" />
+      <img src="gallery/photo11.jpg" alt="Photo 11" loading="lazy" decoding="async" data-caption="Photo 11" />
+      <img src="gallery/photo12.jpg" alt="Photo 12" loading="lazy" decoding="async" data-caption="Photo 12" />
+    </div>
+    <div class="dots" aria-label="Slide dots" role="tablist"></div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <img class="lightbox-image" alt="Selected photo" />
+    <div class="lightbox-caption" aria-live="polite"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
