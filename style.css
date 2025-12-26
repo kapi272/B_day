@@ -1705,6 +1705,10 @@ body {
 
 /* Responsive: Mobile and small tablets */
 @media (max-width: 768px) {
+  body {
+    overflow: auto; /* allow scroll if content overlaps */
+    perspective: none; /* avoid stacking quirks on mobile */
+  }
   .text {
     left: 6vmin;
     top: 50%;
@@ -1720,13 +1724,14 @@ body {
   }
   .flowers {
     right: 2vmin;
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   .photo-cta {
     bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     padding: 12px 18px;
     font-size: 0.95rem;
     z-index: 13000; /* above text and overlays */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   }
   .lightbox-image {
     max-width: 92vw;
@@ -1740,6 +1745,7 @@ body {
 
 /* Small phones */
 @media (max-width: 480px) {
+  body { overflow: auto; perspective: none; }
   .text { top: 54%; }
   .line {
     letter-spacing: 0.01em;
@@ -1769,6 +1775,13 @@ body {
     height: calc(100vh - 64px);
   }
   .dots button { width: 10px; height: 10px; }
+}
+
+/* Ultra-small phones: simplify visuals */
+@media (max-width: 360px) {
+  .flowers { transform: scale(0.5); right: 1vmin; }
+  .long-g, .grow-ans { display: none; }
+  .line { font-size: clamp(0.95rem, 5.2vmin, 1.1rem); }
 }
 
 /* Reduce heavy effects on low-end mobile GPUs */
