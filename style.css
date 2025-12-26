@@ -1706,12 +1706,12 @@ body {
 /* Responsive: Mobile and small tablets */
 @media (max-width: 768px) {
   .text {
-    left: 50%;
-    top: 52%;
-    transform: translate(-50%, -50%);
-    max-width: 92vw;
-    text-align: center;
-    padding: 0 10px;
+    left: 6vmin;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: min(60ch, 88vw);
+    text-align: left;
+    padding: 0 4px;
   }
   .line {
     font-size: clamp(1rem, 4.8vmin, 1.25rem);
@@ -1723,9 +1723,10 @@ body {
     transform: scale(0.7);
   }
   .photo-cta {
-    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     padding: 12px 18px;
     font-size: 0.95rem;
+    z-index: 13000; /* above text and overlays */
   }
   .lightbox-image {
     max-width: 92vw;
@@ -1749,8 +1750,9 @@ body {
     transform: translateX(-50%);
     width: calc(100vw - 32px);
     border-radius: 14px;
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     padding: 14px 18px;
+    z-index: 13000; /* keep above content */
   }
   .photos-toolbar {
     padding: 10px 14px;
