@@ -1702,3 +1702,75 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+
+/* Responsive: Mobile and small tablets */
+@media (max-width: 768px) {
+  .text {
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    max-width: 92vw;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .line {
+    font-size: clamp(1rem, 4.8vmin, 1.25rem);
+    line-height: 1.45;
+    margin: 0.5rem 0;
+  }
+  .flowers {
+    right: 2vmin;
+    transform: scale(0.7);
+  }
+  .photo-cta {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+  .lightbox-image {
+    max-width: 92vw;
+    max-height: 72vh;
+  }
+  .dots {
+    gap: 10px;
+    padding: 6px 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .text { top: 54%; }
+  .line {
+    letter-spacing: 0.01em;
+    font-size: clamp(1rem, 5.6vmin, 1.2rem);
+  }
+  .photo-cta {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 32px);
+    border-radius: 14px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    padding: 14px 18px;
+  }
+  .photos-toolbar {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .photos-back { padding: 8px 12px; }
+  .photos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 72px 12px 12px;
+    gap: 10px;
+  }
+  .photos-slider {
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+  }
+  .dots button { width: 10px; height: 10px; }
+}
+
+/* Reduce heavy effects on low-end mobile GPUs */
+@media (max-width: 480px) {
+  .night { filter: blur(0.2vmin); }
+  .gallery { backdrop-filter: blur(4px); }
+}
